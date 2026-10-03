@@ -69,21 +69,30 @@ cmake --build build/test
 ctest --test-dir build/test
 ```
 
-## Semtech library patches
+## Semtech libraries
 
-Lora-net does not merge external pull requests, so `lib/usp` and `lib/usp_zephyr` point at forks carrying these
-changes on top of Semtech's sources:
+`lib/usp` and `lib/usp_zephyr` are submodules. Each library's source depends on how many lines of code
+Open-Source-Space-Foundation (OSSF) adds on top of the Semtech (Lora-net) release:
 
-| Library | Change |
-|---|---|
-| usp_zephyr | SX126x external RF-switch GPIOs (`tx-enable-gpios` / `rx-enable-gpios`) |
-| usp_zephyr | Zephyr 4.3: drop `select ZEPHYR_LORA_BASICS_MODEM_MODULE` |
-| usp_zephyr | `LR_FHSS_SRC_PATH` for the flattened `lr_fhss_driver` layout |
-| usp_zephyr | SX126x wake-up BUSY-poll settle delay |
-| usp_zephyr | RAC API mutex in `protect_api_call` / `unprotect_api_call` |
-| usp_zephyr | `full_name` in `xiao_nrf54l15` `board.yml` (Zephyr 4.4 schema) |
-| usp | Radio planner: exempt `UNLOCK_RADIO_ACCESS` from the failsafe panic |
-| usp | Radio planner: lazy-sleep hysteresis via `STDBY_XOSC` fallback |
+- Fewer than 20 lines: the submodule points at the Lora-net repository at a release tag, and the changes are kept in
+  `patches/<library>/`.
+- 20 to 50 lines: decided case by case.
+- More than 50 lines: the submodule points at the OSSF fork, on a branch rebased onto the Lora-net release.
+
+Both libraries are currently above 50 lines. Each uses its OSSF fork's `v1.2.1-ossf` branch, which is Lora-net v1.2.1
+plus the following changes:
+
+| Library | Change | Code lines |
+|---|---|---|
+| usp_zephyr | SX126x external RF-switch GPIOs (`tx-enable-gpios` / `rx-enable-gpios`) | 95 |
+| usp_zephyr | Zephyr 4.3+: drop `select ZEPHYR_LORA_BASICS_MODEM_MODULE` | 1 |
+| usp_zephyr | SX126x wake-up BUSY-poll settle delay | 1 |
+| usp_zephyr | RAC API mutex in `protect_api_call` / `unprotect_api_call` | 5 |
+| usp | Radio planner: exempt `UNLOCK_RADIO_ACCESS` from the failsafe panic | 1 |
+| usp | Radio planner: lazy-sleep hysteresis via `STDBY_XOSC` fallback (`RP_LAZY_SLEEP_DELAY_MS`) | 64 |
+
+v1.2.1 makes the SX126x `tx-power-cfg` devicetree property mandatory. Every `semtech,sx126x-new` node must now supply a
+PA table. See `boards/shields/semtech_sx126xmbxxxs/semtech_sx1262_pa_cfg.dtsi` in `usp_zephyr` for the format.
 
 ## License
 
