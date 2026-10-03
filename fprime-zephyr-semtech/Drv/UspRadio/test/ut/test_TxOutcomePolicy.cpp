@@ -17,10 +17,10 @@
 // (no LINK_PROFILES_USE_HOST_TYPES needed — plain int/bool only), so it
 // compiles host-side unmodified.
 //
-// Build: included via pcr's CMakeLists.txt host-UT target.
+// Build: test/CMakeLists.txt host-UT target.
 // ======================================================================
 
-#include "fprime-zephyr/Drv/UspRadio/TxOutcomePolicy.hpp"
+#include "fprime-zephyr-semtech/Drv/UspRadio/TxOutcomePolicy.hpp"
 
 #include <cstdint>
 #include <gtest/gtest.h>

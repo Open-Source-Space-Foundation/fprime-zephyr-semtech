@@ -18,9 +18,9 @@
 #ifndef ZEPHYR_USP_RADIO_HPP
 #define ZEPHYR_USP_RADIO_HPP
 
-#include "fprime-zephyr/Drv/UspRadio/UspRadioComponentAc.hpp"
-#include "fprime-zephyr/Drv/UspRadio/ProfilePolicy.hpp"
-#include "fprime-zephyr/Drv/UspRadio/RalSession.hpp"
+#include "fprime-zephyr-semtech/Drv/UspRadio/UspRadioComponentAc.hpp"
+#include "fprime-zephyr-semtech/Drv/UspRadio/ProfilePolicy.hpp"
+#include "fprime-zephyr-semtech/Drv/UspRadio/RalSession.hpp"
 
 #include <atomic>
 

@@ -2,7 +2,7 @@
 // test_LinkProfiles.cpp
 // Host-side unit tests for the LinkProfiles table (Phase 2, ADR 0002).
 //
-// Build: included via pcr's CMakeLists.txt host-UT target (same gtest
+// Build: test/CMakeLists.txt host-UT target (same gtest
 // infrastructure used by test_DetumbleManager_*, test_RtcManager_*, etc).
 //
 // These tests supplement the static_asserts in LinkProfiles.hpp — they
@@ -15,7 +15,7 @@
 // LINK_PROFILES_USE_HOST_TYPES activates the inline cstdint typedefs inside
 // LinkProfiles.hpp so the header compiles without the F' framework on the path.
 #define LINK_PROFILES_USE_HOST_TYPES
-#include "fprime-zephyr/Drv/UspRadio/LinkProfiles.hpp"
+#include "fprime-zephyr-semtech/Drv/UspRadio/LinkProfiles.hpp"
 
 #include <gtest/gtest.h>
 

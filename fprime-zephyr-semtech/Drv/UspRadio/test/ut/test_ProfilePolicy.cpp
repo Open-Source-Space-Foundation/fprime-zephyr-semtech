@@ -12,13 +12,13 @@
 //   - SET_RX_PROFILE to current profile is a no-op
 //   - SET_RX_PROFILE with revert_s = 0 (no revert armed)
 //
-// Build: included via pcr's CMakeLists.txt host-UT target.
+// Build: test/CMakeLists.txt host-UT target.
 // LINK_PROFILES_USE_HOST_TYPES is injected via target_compile_definitions in
 // the test CMakeLists, activating cstdint typedefs in both headers.
 // ======================================================================
 
-#include "fprime-zephyr/Drv/UspRadio/ProfilePolicy.hpp"
-#include "fprime-zephyr/Drv/UspRadio/LinkProfiles.hpp"
+#include "fprime-zephyr-semtech/Drv/UspRadio/ProfilePolicy.hpp"
+#include "fprime-zephyr-semtech/Drv/UspRadio/LinkProfiles.hpp"
 
 #include <gtest/gtest.h>
 

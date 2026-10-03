@@ -8,12 +8,12 @@
 //   - RX payload location: raw passthrough, compat strip, runt rejection
 //   - TX→RX round trip preserves payload bytes exactly
 //
-// Build: included via pcr's CMakeLists.txt host-UT target.
+// Build: test/CMakeLists.txt host-UT target.
 // LINK_PROFILES_USE_HOST_TYPES is injected via target_compile_definitions in
 // the test CMakeLists, activating cstdint typedefs in the header.
 // ======================================================================
 
-#include "fprime-zephyr/Drv/UspRadio/RadioHeadShim.hpp"
+#include "fprime-zephyr-semtech/Drv/UspRadio/RadioHeadShim.hpp"
 
 #include <gtest/gtest.h>
 

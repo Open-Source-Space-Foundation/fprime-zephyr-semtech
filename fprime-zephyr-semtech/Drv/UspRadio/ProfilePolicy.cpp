@@ -6,7 +6,7 @@
 // LINK_PROFILES_USE_HOST_TYPES is defined by the test runner or host build
 // target (see test CMakeLists.txt).  On Zephyr/F' target builds, F'
 // FPrimeBasicTypes.hpp is on the path; do not define the macro here.
-#include "fprime-zephyr/Drv/UspRadio/ProfilePolicy.hpp"
+#include "fprime-zephyr-semtech/Drv/UspRadio/ProfilePolicy.hpp"
 
 namespace Zephyr {
 

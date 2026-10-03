@@ -22,7 +22,7 @@ using I8  = int8_t;
 using I16 = int16_t;
 #endif
 
-#include "fprime-zephyr/Drv/UspRadio/LinkProfiles.hpp"
+#include "fprime-zephyr-semtech/Drv/UspRadio/LinkProfiles.hpp"
 
 namespace Zephyr {
 

@@ -12,8 +12,8 @@
 
 #ifdef CONFIG_LORA_BASICS_MODEM_DRIVERS
 
-#include "fprime-zephyr/Drv/UspRadio/RalSession.hpp"
-#include "fprime-zephyr/Drv/UspRadio/LinkProfiles.hpp"
+#include "fprime-zephyr-semtech/Drv/UspRadio/RalSession.hpp"
+#include "fprime-zephyr-semtech/Drv/UspRadio/LinkProfiles.hpp"
 
 // USP / Zephyr headers — only visible in Zephyr builds
 #include <zephyr/usp/smtc_zephyr_usp_api.h>

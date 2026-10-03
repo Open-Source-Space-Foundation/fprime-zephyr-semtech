@@ -1,0 +1,6 @@
+[submodule "lib/usp"]
+	path = lib/usp
+	url = https://github.com/Open-Source-Space-Foundation/usp.git
+[submodule "lib/usp_zephyr"]
+	path = lib/usp_zephyr
+	url = https://github.com/Open-Source-Space-Foundation/usp_zephyr.git

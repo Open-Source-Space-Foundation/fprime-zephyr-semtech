@@ -4,10 +4,10 @@
 //         See UspRadio.hpp for the threading model and buffer ownership.
 // ======================================================================
 
-#include "fprime-zephyr/Drv/UspRadio/UspRadio.hpp"
-#include "fprime-zephyr/Drv/UspRadio/LinkProfiles.hpp"
-#include "fprime-zephyr/Drv/UspRadio/RadioHeadShim.hpp"
-#include "fprime-zephyr/Drv/UspRadio/TxOutcomePolicy.hpp"
+#include "fprime-zephyr-semtech/Drv/UspRadio/UspRadio.hpp"
+#include "fprime-zephyr-semtech/Drv/UspRadio/LinkProfiles.hpp"
+#include "fprime-zephyr-semtech/Drv/UspRadio/RadioHeadShim.hpp"
+#include "fprime-zephyr-semtech/Drv/UspRadio/TxOutcomePolicy.hpp"
 
 #include <Fw/Logger/Logger.hpp>
 #include <cstring>
